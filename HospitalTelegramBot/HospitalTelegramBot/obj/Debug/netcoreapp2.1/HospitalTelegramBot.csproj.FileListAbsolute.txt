@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\bin\Debug\netcoreapp2.1\HospitalTelegramBot.deps.json
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\bin\Debug\netcoreapp2.1\HospitalTelegramBot.runtimeconfig.json
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\bin\Debug\netcoreapp2.1\HospitalTelegramBot.runtimeconfig.dev.json
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\bin\Debug\netcoreapp2.1\HospitalTelegramBot.dll
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.csprojAssemblyReference.cache
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.AssemblyInfo.cs
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\bin\Debug\netcoreapp2.1\HospitalTelegramBot.pdb
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.dll
+C:\Users\User\Desktop\HospitalTelegramBot\HospitalTelegramBot\HospitalTelegramBot\obj\Debug\netcoreapp2.1\HospitalTelegramBot.pdb

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <APIToken>583886925:AAFm4QFk8F6jyVgfCa4nfw6Jp1UuT6RD65A</APIToken>
+  <LogFile>..\..\..\file.log</LogFile>
+</config>
