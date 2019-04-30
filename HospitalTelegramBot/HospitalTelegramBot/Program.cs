@@ -1,4 +1,5 @@
 ﻿using HospitalTelegramBot.Controller;
+using HospitalTelegramBot.Model;
 using System;
 using System.Text;
 using System.Threading;
@@ -13,6 +14,12 @@ namespace HospitalTelegramBot
         static void Main()
         {
             Console.OutputEncoding = Encoding.UTF8;
+
+            using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
+            {
+                db.DateOfBirths.Add(new DateOfBirth() { Year = 2000, Day = 5, Month = 6 });
+                db.SaveChanges();
+            }
 
             botClient = new TelegramBotClient(ConfigTelegramBot.APIToken);
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalTelegramBot", "HospitalTelegramBot\HospitalTelegramBot.csproj", "{67EA4537-9D0B-497B-8984-E1C790470936}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalTelegramBot", "HospitalTelegramBot\HospitalTelegramBot.csproj", "{0EAB6720-B61B-4D16-896F-DAEE333E3EE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67EA4537-9D0B-497B-8984-E1C790470936}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67EA4537-9D0B-497B-8984-E1C790470936}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67EA4537-9D0B-497B-8984-E1C790470936}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67EA4537-9D0B-497B-8984-E1C790470936}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EAB6720-B61B-4D16-896F-DAEE333E3EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EAB6720-B61B-4D16-896F-DAEE333E3EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EAB6720-B61B-4D16-896F-DAEE333E3EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EAB6720-B61B-4D16-896F-DAEE333E3EE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CDB10E73-796C-4318-9653-D0F66CC518DA}
+		SolutionGuid = {43B8B885-3B5C-4A17-B602-4492B800AABD}
 	EndGlobalSection
 EndGlobal
