@@ -4,6 +4,8 @@ namespace HospitalTelegramBot.Model
 {
     class UserChat
     {
+        public long idChat;
+
         public int Id { get; set; }
         public int IdChat { get; set; }
         public string ChatPosition { get; set; }
