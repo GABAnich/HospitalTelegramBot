@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Threading.Tasks;
 
 namespace HospitalTelegramBot.Model.Services
@@ -18,12 +15,11 @@ namespace HospitalTelegramBot.Model.Services
             }
         }
 
-        public static async Task AddPerson(string lastName, string firstName, string middleName, int day, int month, int year)
+        public static async Task AddPerson(int dateOfBirthId, string lastName, string firstName, string middleName)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {
-                DateOfBirth date = await ServicesDateOfBirth.ForceGetDateOfBirth(day, month, year);
-                Person person = new Person() { LastName = lastName, FirstName = firstName, MiddleName = middleName, DateOfBirthId = date.Id };
+                Person person = new Person() { LastName = lastName, FirstName = firstName, MiddleName = middleName, DateOfBirthId = dateOfBirthId };
                 db.People.Add(person);
                 await db.SaveChangesAsync();
             }
