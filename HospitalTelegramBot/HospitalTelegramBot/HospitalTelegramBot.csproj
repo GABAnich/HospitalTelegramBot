@@ -64,6 +64,8 @@
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Profession.cs" />
     <Compile Include="Model\Record.cs" />
+    <Compile Include="Model\Services\ServicesDateOfBirth.cs" />
+    <Compile Include="Model\Services\ServicesPerson.cs" />
     <Compile Include="Model\Services\ServicesTempInformation.cs" />
     <Compile Include="Model\Services\ServicesUserChat.cs" />
     <Compile Include="Model\TempInformation.cs" />
