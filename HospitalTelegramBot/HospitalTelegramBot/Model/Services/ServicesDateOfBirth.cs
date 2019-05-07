@@ -26,15 +26,5 @@ namespace HospitalTelegramBot.Model.Services
                 await db.SaveChangesAsync();
             }
         }
-
-        public static async Task<DateOfBirth> ForceGetDateOfBirth(int day, int month, int year)
-        {
-            DateOfBirth date = GetDateOfBirth(day, month, year);
-            if (date == null)
-            {
-                await AddDateOfBirth(day, month, year);
-            }
-            return GetDateOfBirth(day, month, year);
-        }
     }
 }
