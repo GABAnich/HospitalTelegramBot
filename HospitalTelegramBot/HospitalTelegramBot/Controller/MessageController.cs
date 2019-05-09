@@ -6,7 +6,10 @@ namespace HospitalTelegramBot.Controller
     {
         internal static async void OnMessageAsync(object sender, MessageEventArgs e)
         {
-            await Program.botClient.SendTextMessageAsync(e.Message.Chat.Id, "Hello world!");
+            await Program.botClient.SendTextMessageAsync(
+                chatId: e.Message.Chat.Id,
+                text: "Hello world!",
+                replyMarkup: View.Keyboards.MainKeyboard);
         }
     }
 }

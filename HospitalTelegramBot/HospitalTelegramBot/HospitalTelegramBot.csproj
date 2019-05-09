@@ -65,13 +65,17 @@
     <Compile Include="Model\Profession.cs" />
     <Compile Include="Model\Record.cs" />
     <Compile Include="Model\Services\ServicesDateOfBirth.cs" />
+    <Compile Include="Model\Services\ServicesDoctor.cs" />
     <Compile Include="Model\Services\ServicesPerson.cs" />
+    <Compile Include="Model\Services\ServicesProfession.cs" />
+    <Compile Include="Model\Services\ServicesRecord.cs" />
     <Compile Include="Model\Services\ServicesTempInformation.cs" />
     <Compile Include="Model\Services\ServicesUserChat.cs" />
     <Compile Include="Model\TempInformation.cs" />
     <Compile Include="Model\UserChat.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Keyboards.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
