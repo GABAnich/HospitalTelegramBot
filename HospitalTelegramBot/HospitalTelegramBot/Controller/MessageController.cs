@@ -1,4 +1,5 @@
 ﻿using HospitalTelegramBot.Model.Services;
+using HotespitalTelegramBot;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
 
@@ -23,14 +24,14 @@ namespace HospitalTelegramBot.Controller
                 await ServicesMessageController.RouteMenuAsync(userInput, chat);
 
                 chatPosition = DbServices.GetChatPositionByIdChat(chat.Id);
-                // Logger.Log(chatPosition, e);
+                Logger.Log(chatPosition, e);
                 await ServicesMessageController.RouteMessageChatPositionAsync(chatPosition, e);
             }
             catch (Telegram.Bot.Exceptions.ApiRequestException exception)
             {
                 if (exception.Message == "Forbidden: bot was blocked by the user")
                 {
-                    // Logger.Log(exception.Message);
+                    Logger.Log(exception.Message);
                     return;
                 }
             }

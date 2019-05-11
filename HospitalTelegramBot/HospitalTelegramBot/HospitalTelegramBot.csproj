@@ -61,6 +61,7 @@
     <Compile Include="Controller\ServicesChatPosition\MainMenu.cs" />
     <Compile Include="Controller\ServicesChatPosition\Start.cs" />
     <Compile Include="Controller\ServicesMessageController.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Model\DateOfBirth.cs" />
     <Compile Include="Model\Doctor.cs" />
     <Compile Include="Model\HospitalTelegramBotContext.cs" />
