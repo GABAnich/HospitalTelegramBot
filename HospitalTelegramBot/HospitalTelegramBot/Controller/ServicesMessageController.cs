@@ -43,6 +43,18 @@ namespace HospitalTelegramBot.Controller
             {
                 await ServicesChatPosition.MainMenuAsync(e);
             }
+            else if (chatPosition == "👨‍⚕️ Лікарі 0")
+            {
+                await ServicesChatPosition.Doctors_0(e);
+            }
+            else if (chatPosition == "👨‍⚕️ Лікарі 1")
+            {
+                await ServicesChatPosition.Doctors_1(e);
+            }
+            else if (chatPosition == "👨‍⚕️ Лікарі 2")
+            {
+                await ServicesChatPosition.Doctors_2(e);
+            }
         }
         internal static async Task SendPhotoAsync(ChatId chatId,
             string photo,
