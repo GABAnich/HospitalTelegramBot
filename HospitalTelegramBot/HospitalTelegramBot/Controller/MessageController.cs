@@ -1,4 +1,6 @@
-﻿using Telegram.Bot.Args;
+﻿using HospitalTelegramBot.Model.Services;
+using Telegram.Bot.Args;
+using Telegram.Bot.Types;
 
 namespace HospitalTelegramBot.Controller
 {
@@ -6,10 +8,32 @@ namespace HospitalTelegramBot.Controller
     {
         internal static async void OnMessageAsync(object sender, MessageEventArgs e)
         {
-            await Program.botClient.SendTextMessageAsync(
-                chatId: e.Message.Chat.Id,
-                text: "Hello world!",
-                replyMarkup: View.Keyboards.MainKeyboard);
+            string userInput = e.Message.Text;
+            Chat chat = e.Message.Chat;
+            string chatPosition;
+
+            if (e.Message == null)
+            {
+                return;
+            }
+
+            try
+            {
+                await DbServices.CrateIfNotExistUserChatAsync(chat.Id);
+                await ServicesMessageController.RouteMenuAsync(userInput, chat);
+
+                chatPosition = DbServices.GetChatPositionByIdChat(chat.Id);
+                // Logger.Log(chatPosition, e);
+                await ServicesMessageController.RouteMessageChatPositionAsync(chatPosition, e);
+            }
+            catch (Telegram.Bot.Exceptions.ApiRequestException exception)
+            {
+                if (exception.Message == "Forbidden: bot was blocked by the user")
+                {
+                    // Logger.Log(exception.Message);
+                    return;
+                }
+            }
         }
     }
 }

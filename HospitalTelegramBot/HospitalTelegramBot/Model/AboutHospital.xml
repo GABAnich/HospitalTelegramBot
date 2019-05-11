@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <infoAboutHospital>
+    *КНП «ГУСЯТИНСЬКА КЛІНІЧНА РАЙОНА ЛІКАРНЯ»*
+
+    *За допомогою бота ВИ можете: *
+    - Записатись на прийом до лікаря;
+    - Знятись із черги;
+    - Переглянути список лікарів.
+
+    /start - повернутись на початок
+  </infoAboutHospital>
+  <imageAboutHospital>http://www.firtka.if.ua/media/cache/blog_thumb/data/blog/211492/51c1c0d436347a5cdb17647d8852b9d2.jpeg</imageAboutHospital>
+
+
+</data>

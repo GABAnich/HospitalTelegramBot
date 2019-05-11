@@ -7,7 +7,7 @@ namespace HospitalTelegramBot.Model
         public long idChat;
 
         public int Id { get; set; }
-        public int IdChat { get; set; }
+        public long IdChat { get; set; }
         public string ChatPosition { get; set; }
 
         public ICollection<TempInformation> TempInformation { get; set; }

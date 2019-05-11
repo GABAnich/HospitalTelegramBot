@@ -58,12 +58,16 @@
   <ItemGroup>
     <Compile Include="ConfigTelegramBot.cs" />
     <Compile Include="Controller\MessageController.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Start.cs" />
+    <Compile Include="Controller\ServicesMessageController.cs" />
     <Compile Include="Model\DateOfBirth.cs" />
     <Compile Include="Model\Doctor.cs" />
     <Compile Include="Model\HospitalTelegramBotContext.cs" />
     <Compile Include="Model\Person.cs" />
     <Compile Include="Model\Profession.cs" />
     <Compile Include="Model\Record.cs" />
+    <Compile Include="Model\Services\Services.cs" />
+    <Compile Include="Model\Services\ServicesAboutHospital.cs" />
     <Compile Include="Model\Services\ServicesDateOfBirth.cs" />
     <Compile Include="Model\Services\ServicesDoctor.cs" />
     <Compile Include="Model\Services\ServicesPerson.cs" />
@@ -84,6 +88,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="Config.xml" />
+    <Content Include="Model\AboutHospital.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

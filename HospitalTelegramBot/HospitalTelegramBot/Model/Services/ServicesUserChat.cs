@@ -5,7 +5,7 @@ namespace HospitalTelegramBot.Model.Services
 {
     class ServicesUserChat
     {
-        public static UserChat GetUserChatByIdChat(int idChat)
+        public static UserChat GetUserChatByIdChat(long idChat)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {
@@ -15,7 +15,7 @@ namespace HospitalTelegramBot.Model.Services
             }
         }
 
-        public static async Task AddUserChatAsync(int idChat, string chatPosition)
+        public static async Task AddUserChatAsync(long idChat, string chatPosition)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {
@@ -25,7 +25,7 @@ namespace HospitalTelegramBot.Model.Services
             }
         }
 
-        public static async Task UpdateChatPositionAsync(int idChat, string position)
+        public static async Task UpdateChatPositionAsync(long idChat, string position)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {

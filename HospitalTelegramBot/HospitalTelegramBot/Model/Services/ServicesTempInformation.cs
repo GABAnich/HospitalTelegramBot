@@ -32,7 +32,7 @@ namespace HospitalTelegramBot.Model.Services
             }
         }
 
-        public static async Task RemoveRangeTempInformationByChatIdAsync(int chatId)
+        public static async Task RemoveRangeTempInformationByChatIdAsync(long chatId)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {
