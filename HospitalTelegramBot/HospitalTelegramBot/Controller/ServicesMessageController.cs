@@ -41,7 +41,7 @@ namespace HospitalTelegramBot.Controller
             }
             else if (chatPosition == "🎛 Головне меню")
             {
-                //await ServicesChatPosition.MainMenuAsync(e);
+                await ServicesChatPosition.MainMenuAsync(e);
             }
         }
         internal static async Task SendPhotoAsync(ChatId chatId,
@@ -55,6 +55,24 @@ namespace HospitalTelegramBot.Controller
                 caption: caption,
                 parseMode: ParseMode.Markdown,
                 replyMarkup: keyboard);
+        }
+
+        internal static async Task SendMessageAsync(ChatId chatId,
+            string text,
+            IReplyMarkup keyboard = null)
+        {
+            if (keyboard == null)
+            {
+                keyboard = new ReplyKeyboardRemove();
+            }
+
+            Message message = await Program.botClient.SendTextMessageAsync(
+                    chatId: chatId,
+                    text: text,
+                    parseMode: ParseMode.Markdown,
+                    disableNotification: true,
+                    replyMarkup: keyboard
+                );
         }
     }
 }

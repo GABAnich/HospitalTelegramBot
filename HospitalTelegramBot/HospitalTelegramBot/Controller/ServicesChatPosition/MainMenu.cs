@@ -8,16 +8,12 @@ namespace HospitalTelegramBot.Controller
 {
     partial class ServicesChatPosition
     {
-        internal static async Task StartAsync(MessageEventArgs e)
+        internal static async Task MainMenuAsync(MessageEventArgs e)
         {
             Chat chat = e.Message.Chat;
 
             await DbServices.ClearUserTempDataAsync(chat.Id);
-            await ServicesMessageController.SendPhotoAsync(
-                chat,
-                AboutHospital.ImageAboutHotel,
-                AboutHospital.InfoAboutHotel,
-                Keyboards.MainKeyboard);
+            await ServicesMessageController.SendMessageAsync(chat, "Виберіть пунк меню", Keyboards.MainKeyboard);
         }
     }
 }
