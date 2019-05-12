@@ -87,6 +87,14 @@ namespace HospitalTelegramBot.Controller
             {
                 await ServicesChatPosition.Queue_7(e);
             }
+            else if (chatPosition == "❌ Зняти бронювання 0")
+            {
+                await ServicesChatPosition.CancelReservation_0(e);
+            }
+            else if (chatPosition == "❌ Зняти бронювання 1")
+            {
+                await ServicesChatPosition.CancelReservation_1(e);
+            }
         }
         internal static async Task SendPhotoAsync(ChatId chatId,
             string photo,

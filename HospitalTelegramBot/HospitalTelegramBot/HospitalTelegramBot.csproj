@@ -58,10 +58,12 @@
   <ItemGroup>
     <Compile Include="ConfigTelegramBot.cs" />
     <Compile Include="Controller\MessageController.cs" />
+    <Compile Include="Controller\ServicesChatPosition\CancelReservation_1.cs" />
     <Compile Include="Controller\ServicesChatPosition\Doctors_2.cs" />
     <Compile Include="Controller\ServicesChatPosition\Doctors_1.cs" />
     <Compile Include="Controller\ServicesChatPosition\Doctors_0.cs" />
     <Compile Include="Controller\ServicesChatPosition\MainMenu.cs" />
+    <Compile Include="Controller\ServicesChatPosition\CancelReservation_0.cs" />
     <Compile Include="Controller\ServicesChatPosition\Queue_7.cs" />
     <Compile Include="Controller\ServicesChatPosition\Queue_6.cs" />
     <Compile Include="Controller\ServicesChatPosition\Queue_5.cs" />
