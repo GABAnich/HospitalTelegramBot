@@ -62,6 +62,14 @@
     <Compile Include="Controller\ServicesChatPosition\Doctors_1.cs" />
     <Compile Include="Controller\ServicesChatPosition\Doctors_0.cs" />
     <Compile Include="Controller\ServicesChatPosition\MainMenu.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_7.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_6.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_5.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_4.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_3.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_2.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_1.cs" />
+    <Compile Include="Controller\ServicesChatPosition\Queue_0.cs" />
     <Compile Include="Controller\ServicesChatPosition\Start.cs" />
     <Compile Include="Controller\ServicesMessageController.cs" />
     <Compile Include="Logger.cs" />

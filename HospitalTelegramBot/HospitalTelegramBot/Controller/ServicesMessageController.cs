@@ -55,6 +55,38 @@ namespace HospitalTelegramBot.Controller
             {
                 await ServicesChatPosition.Doctors_2(e);
             }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 0")
+            {
+                await ServicesChatPosition.Queue_0(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 1")
+            {
+                await ServicesChatPosition.Queue_1(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 2")
+            {
+                await ServicesChatPosition.Queue_2(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 3")
+            {
+                await ServicesChatPosition.Queue_3(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 4")
+            {
+                await ServicesChatPosition.Queue_4(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 5")
+            {
+                await ServicesChatPosition.Queue_5(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 6")
+            {
+                await ServicesChatPosition.Queue_6(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 7")
+            {
+                await ServicesChatPosition.Queue_7(e);
+            }
         }
         internal static async Task SendPhotoAsync(ChatId chatId,
             string photo,
