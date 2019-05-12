@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace HospitalTelegramBot.Model.Services
 {
@@ -25,6 +27,18 @@ namespace HospitalTelegramBot.Model.Services
         public static async Task ChangePositionAsync(long idChat, string position)
         {
             await ServicesUserChat.UpdateChatPositionAsync(idChat, position);
+        }
+
+        public static List<Profession> GetAviableProfessions()
+        {
+            using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
+            {
+                List<int> doctorProfessionId = db.Doctors.Select(d => d.ProfessionId).ToList();
+
+                return db.Professions
+                    .Where(p => doctorProfessionId.Contains(p.Id))
+                    .ToList();
+            }
         }
     }
 }
