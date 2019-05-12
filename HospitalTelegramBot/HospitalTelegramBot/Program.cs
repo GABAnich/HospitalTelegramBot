@@ -1,5 +1,4 @@
 ﻿using HospitalTelegramBot.Controller;
-using HospitalTelegramBot.Model;
 using System;
 using System.Text;
 using System.Threading;
@@ -18,7 +17,7 @@ namespace HospitalTelegramBot
             botClient = new TelegramBotClient(ConfigTelegramBot.APIToken);
 
             botClient.OnMessage += MessageController.OnMessageAsync;
-            //botClient.OnCallbackQuery += MessageController.OnCallbackQueryAsync;
+            botClient.OnCallbackQuery += MessageController.OnCallbackQueryAsync;
 
             botClient.StartReceiving();
             Thread.Sleep(int.MaxValue);

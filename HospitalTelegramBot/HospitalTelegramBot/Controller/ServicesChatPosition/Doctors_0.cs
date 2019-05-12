@@ -21,7 +21,7 @@ namespace HospitalTelegramBot.Controller
         private static async Task Doctors_0(Chat chat)
         {
             List<Profession> doctorProfessions = DbServices.GetAviableProfessions();
-            IReplyMarkup keyboards = Keyboards.GetAviableProfessions(doctorProfessions);
+            IReplyMarkup keyboards = Keyboards.Professions(doctorProfessions);
 
             await ServicesMessageController.SendMessageAsync(chat, "Оберіть професію", keyboards);
             await DbServices.ChangePositionAsync(chat.Id, "👨‍⚕️ Лікарі 1");

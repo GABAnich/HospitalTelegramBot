@@ -1,4 +1,5 @@
 ﻿using HospitalTelegramBot.Model;
+using System;
 using System.Collections.Generic;
 using Telegram.Bot.Types.ReplyMarkups;
 
@@ -17,13 +18,26 @@ namespace HospitalTelegramBot.View
             OneTimeKeyboard = true
         };
 
-        internal static IReplyMarkup GetAviableProfessions(List<Profession> aviableProfessions)
+        internal static IReplyMarkup Professions(List<Profession> aviableProfessions)
         {
             List<List<InlineKeyboardButton>> keyboards = new List<List<InlineKeyboardButton>>();
             foreach (Profession p in aviableProfessions)
             {
                 keyboards.Add(new List<InlineKeyboardButton>() {
                     InlineKeyboardButton.WithCallbackData($"{p.Name}", $"{p.Id}")
+                });
+            }
+
+            return new InlineKeyboardMarkup(keyboards);
+        }
+
+        internal static IReplyMarkup People(List<Person> people)
+        {
+            List<List<InlineKeyboardButton>> keyboards = new List<List<InlineKeyboardButton>>();
+            foreach (Person p in people)
+            {
+                keyboards.Add(new List<InlineKeyboardButton>() {
+                    InlineKeyboardButton.WithCallbackData($"{p.LastName} {p.FirstName} {p.MiddleName}", $"{p.Id}")
                 });
             }
 

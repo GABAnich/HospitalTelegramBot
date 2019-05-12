@@ -36,5 +36,19 @@ namespace HospitalTelegramBot.Controller
                 }
             }
         }
+
+        internal static async void OnCallbackQueryAsync(object sender, CallbackQueryEventArgs e)
+        {
+            Chat chat = e.CallbackQuery.Message.Chat;
+            int messageId = e.CallbackQuery.Message.MessageId;
+            string chatPosition = DbServices.GetChatPositionByIdChat(chat.Id);
+            string userInput = e.CallbackQuery.Data;
+
+            Logger.Log(chatPosition, e);
+
+            await Program.botClient.DeleteMessageAsync(chat, messageId);
+            await ServicesMessageController.RouteMenuAsync(userInput, chat);
+            await ServicesMessageController.RouteMessageChatPositionAsync(chatPosition, e);
+        }
     }
 }

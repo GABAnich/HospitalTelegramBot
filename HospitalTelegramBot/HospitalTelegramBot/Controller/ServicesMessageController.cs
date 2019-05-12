@@ -47,10 +47,6 @@ namespace HospitalTelegramBot.Controller
             {
                 await ServicesChatPosition.Doctors_0(e);
             }
-            else if (chatPosition == "👨‍⚕️ Лікарі 1")
-            {
-                await ServicesChatPosition.Doctors_1(e);
-            }
             else if (chatPosition == "👨‍⚕️ Лікарі 2")
             {
                 await ServicesChatPosition.Doctors_2(e);
@@ -96,6 +92,15 @@ namespace HospitalTelegramBot.Controller
                 await ServicesChatPosition.CancelReservation_1(e);
             }
         }
+
+        internal static async Task RouteMessageChatPositionAsync(string chatPosition, CallbackQueryEventArgs e)
+        {
+            if (chatPosition == "👨‍⚕️ Лікарі 1")
+            {
+                await ServicesChatPosition.Doctors_1(e);
+            }
+        }
+
         internal static async Task SendPhotoAsync(ChatId chatId,
             string photo,
             string caption,
