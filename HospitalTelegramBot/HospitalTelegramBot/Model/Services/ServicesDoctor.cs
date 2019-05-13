@@ -14,5 +14,15 @@ namespace HospitalTelegramBot.Model.Services
                     .FirstOrDefault();
             }
         }
+
+        public static Doctor GetDoctorByPersonId(int personId)
+        {
+            using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
+            {
+                return db.Doctors
+                    .Where(d => d.PersonId == personId)
+                    .FirstOrDefault();
+            }
+        }
     }
 }
