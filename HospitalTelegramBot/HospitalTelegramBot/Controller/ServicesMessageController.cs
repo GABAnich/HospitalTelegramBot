@@ -51,10 +51,6 @@ namespace HospitalTelegramBot.Controller
             {
                 await ServicesChatPosition.Queue_0(e);
             }
-            else if (chatPosition == "🏥 Зареєструватись у чергу 2")
-            {
-                await ServicesChatPosition.Queue_2(e);
-            }
             else if (chatPosition == "🏥 Зареєструватись у чергу 3")
             {
                 await ServicesChatPosition.Queue_3(e);
@@ -98,6 +94,10 @@ namespace HospitalTelegramBot.Controller
             else if (chatPosition == "🏥 Зареєструватись у чергу 1")
             {
                 await ServicesChatPosition.Queue_1(e);
+            }
+            else if (chatPosition == "🏥 Зареєструватись у чергу 2")
+            {
+                await ServicesChatPosition.Queue_2(e);
             }
         }
 

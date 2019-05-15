@@ -7,9 +7,9 @@ namespace HospitalTelegramBot.Controller
 {
     partial class ServicesChatPosition
     {
-        internal static async Task Queue_2(MessageEventArgs e)
+        internal static async Task Queue_2(CallbackQueryEventArgs e)
         {
-            Chat chat = e.Message.Chat;
+            Chat chat = e.CallbackQuery.Message.Chat;
 
             await Queue_2(chat);
         }
