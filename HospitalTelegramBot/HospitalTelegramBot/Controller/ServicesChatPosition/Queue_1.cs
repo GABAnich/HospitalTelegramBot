@@ -1,23 +1,32 @@
-﻿using HospitalTelegramBot.Model.Services;
+﻿using HospitalTelegramBot.Model;
+using HospitalTelegramBot.Model.Services;
+using HospitalTelegramBot.View;
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Telegram.Bot.Args;
 using Telegram.Bot.Types;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace HospitalTelegramBot.Controller
 {
     partial class ServicesChatPosition
     {
-        internal static async Task Queue_1(MessageEventArgs e)
+        internal static async Task Queue_1(CallbackQueryEventArgs e)
         {
-            Chat chat = e.Message.Chat;
+            Chat chat = e.CallbackQuery.Message.Chat;
+            string userInput = e.CallbackQuery.Data;
 
-            await Queue_1(chat);
+            await Queue_1(chat, userInput);
         }
 
-        private static async Task Queue_1(Chat chat)
+        private static async Task Queue_1(Chat chat, string userInput)
         {
+            List<Person> people = DbServices.GetDoctorPeopleByProfession(Convert.ToInt32(userInput));
+            IReplyMarkup keyboards = Keyboards.People(people);
+
             await ServicesMessageController.SendMessageAsync(
-                chat, "[Список лікарів та їх найближчий вільний час]");
+                chat, "Оберіть лікаря", keyboards);
             await DbServices.ChangePositionAsync(chat.Id, "🏥 Зареєструватись у чергу 2");
         }
     }
