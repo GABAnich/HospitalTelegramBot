@@ -17,7 +17,8 @@ namespace HospitalTelegramBot.Controller
         private static async Task Queue_2(Chat chat)
         {
             await ServicesMessageController.SendMessageAsync(
-                chat, "[Список доступних годин для запису у чергу]");
+                chat, "Введіть дату та час у форматі: ДД:ММ:РРРР:ГГ:ХХ");
+
             await DbServices.ChangePositionAsync(chat.Id, "🏥 Зареєструватись у чергу 3");
         }
     }
