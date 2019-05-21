@@ -1,17 +1,18 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HospitalTelegramBot.Model.Services
 {
     class ServicesTempInformation
     {
-        public static async Task AddTempInformationAsync(int chatId, string property, string value)
+        public static async Task AddTempInformationAsync(long chatId, string property, string value)
         {
             using (HospitalTelegramBotContext db = new HospitalTelegramBotContext())
             {
                 var obj = new TempInformation()
                 {
-                    UserChatId = chatId,
+                    UserChatId = Convert.ToInt32(chatId),
                     Property = property,
                     Value = value
                 };

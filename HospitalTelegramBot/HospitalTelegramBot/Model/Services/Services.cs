@@ -20,6 +20,11 @@ namespace HospitalTelegramBot.Model.Services
             await ServicesTempInformation.RemoveRangeTempInformationByChatIdAsync(chatId);
         }
 
+        public static async Task SaveUserTempDataAsync(string property, string value, long chatId)
+        {
+            await ServicesTempInformation.AddTempInformationAsync(chatId, property, value);
+        }
+
         public static string GetChatPositionByIdChat(long idChat)
         {
             return ServicesUserChat.GetUserChatByIdChat(idChat).ChatPosition;

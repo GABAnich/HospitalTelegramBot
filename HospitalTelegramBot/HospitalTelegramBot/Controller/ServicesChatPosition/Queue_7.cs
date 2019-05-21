@@ -17,7 +17,7 @@ namespace HospitalTelegramBot.Controller
         private static async Task Queue_7(Chat chat)
         {
             await ServicesMessageController.SendMessageAsync(
-                chat, "[Інформація про реєстрацію]");
+                chat, "Реєстрація відбулась успішно");
             await DbServices.ChangePositionAsync(chat.Id, "🎛 Головне меню");
         }
     }
